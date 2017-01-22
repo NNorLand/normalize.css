@@ -1,4 +1,3 @@
-/*! normalize.css v5.0.0 | MIT License | github.com/necolas/normalize.css */
 
 /* Document
    ========================================================================== */
@@ -22,10 +21,15 @@ html {
 
 /**
  * Remove the margin in all browsers (opinionated).
+ * Disable certain interactions on touch devices
  */
 
 body {
   margin: 0;
+  -webkit-touch-callout: none;
+  -webkit-text-size-adjust: none;
+  -webkit-user-select: none;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
 }
 
 /**
@@ -247,6 +251,7 @@ svg:not(:root) {
 /**
  * 1. Change the font styles in all browsers (opinionated).
  * 2. Remove the margin in Firefox and Safari.
+ * 3. remove iOS input inline shadow
  */
 
 button,
@@ -258,6 +263,9 @@ textarea {
   font-size: 100%; /* 1 */
   line-height: 1.15; /* 1 */
   margin: 0; /* 2 */
+  border: 0; /* 3 */
+  -webkit-appearance: none; /* 3 */
+  outline: none;
 }
 
 /**
